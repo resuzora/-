@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        } 
+        p {
+            color: black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-indent: 1.5em;
+        }
+        h2 {
+            font-family: "Roboto Mono", monospace;
+            font-size: 60px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        header {
+            display:grid;
+            gap:20px;
+            margin-bottom: 100px;
+        }
+        span {
+            color: rgba(55, 55, 240, 1);
+        }
+        .logo a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 50px;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .main-nav ul {
+            list-style: none;
+            display:flex;
+            gap:50px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        nav a:hover {
+            color: black;
+            cursor: pointer;
+            text-decoration: underline;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .header-div {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 50px 0px 50px;
+        }
+        hr {
+            height: 5px;
+            background-color: rgba(55, 55, 240, 1);
+        }
+
+
+        .hero a {
+            background-color: rgba(55, 55, 240, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 12px 48px;
+        }
+        .hero a:hover{
+            background-color: rgba(111, 111, 246, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 12px 48px;
+        }
+        .hero a:active{
+            background-color: white;
+            border-radius: 100px;
+            outline: 5px rgba(111, 111, 246, 1) solid;
+            outline-offset: -5px;
+            color: rgba(111, 111, 246, 1);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 12px 48px;
+            transform: scale(0.95);
+        }
+        .hero ul {
+            list-style: none;
+            display:flex;
+            gap:50px;
+        }
+        h1 {
+            color:black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 100px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-indent: 850px;
+        }
+        h4 {
+            color:black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 40px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal
+        }
+        .hero {
+            padding-right: 50px;
+            padding-left: 50px;
+            display:grid;
+            gap: 50px;
+            margin-bottom: 100px;
+        }
+
+
+        .block-div {
+            display:grid;
+            gap:20px;
+        }
+        .about ul {
+            padding-left:40px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .about {
+            padding-right:50px;
+            padding-left:50px;
+            margin-bottom: 100px;
+            display: grid;
+            gap:50px;
+        }
+
+
+        .services h2 {
+            font-family: "Roboto Mono", monospace;
+            font-size: 60px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .services h3 {
+            color: rgba(55, 55, 240, 1);
+            font-family: "Roboto Mono", monospace;
+            font-size: 30px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card {
+            display:grid;
+            gap:10px;
+            width: 600px;
+        }
+        .services ul {
+            display:flex;
+            gap: 310px;
+            list-style: none;
+        }
+        .services {
+            display:grid;
+            gap:50px;
+            padding-right: 50px;
+            padding-left: 50px;
+            margin-bottom: 100px;
+        }
+        .block-card {
+            display: grid;
+            gap: 20px;
+        }
+
+
+
+        .portfolio {
+            display:grid;
+            gap:50px;
+            margin-bottom: 100px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h3 {
+            color: black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 30px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        img {
+            width: 1760px; 
+            border-radius: 20px;
+            outline: 5px solid rgba(55, 55, 240, 1);
+            outline-offset: -5px;
+        }
+        .portfolio-div {
+            display: grid;
+            gap:50px;
+        }
+        .card-portfolio {
+            display: grid;
+            gap:20px;
+        }
+        .card-portfolio div {
+            display: grid;
+            gap:10px;
+        }
+
+
+        .contacts {
+            display: grid;
+            gap:50px;
+            padding-right: 50px;
+            padding-left: 50px;
+            margin-bottom: 100px;
+        }
+        input {
+            background-color: white;
+            border-radius: 100px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 12px 48px;
+            outline: 5px solid rgba(55, 55, 240, 1);
+            outline-offset: -5px;
+            height: 50px;
+        }
+        .contacts button {
+            background-color: rgba(55, 55, 240, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            border:0px;
+            height: 70px;
+        }
+        .contacts button:hover{
+            background-color: rgba(111, 111, 246, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            height: 70px;
+        }
+        .contacts button:active{
+            background-color: white;
+            border-radius: 100px;
+            outline: 5px rgba(111, 111, 246, 1) solid;
+            outline-offset: -5px;
+            color: rgba(111, 111, 246, 1);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 20px;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            height: 70px;
+            transform: scale(0.95);
+        }
+        .contacts div {
+            display: grid;
+            gap:10px;
+        }
+        .contacts form {
+            display: grid;
+            gap:20px;
+        }
+        .contacts span {
+            color: rgba(230, 39, 39, 1);
+        }
+
+
+
+        footer p {
+            text-indent: 1240px;
+            display: flex;    
+            color:white;
+        }
+        footer {
+            background-color: rgba(55, 55, 240, 1);
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-bottom: 20px;
+            display: grid;
+            gap:50px;
+        }
+        footer .logo a{
+            color:white;
+            font-size: 100px;
+            font-weight: 500px;
+        }
+        footer .logo span {
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-div">
+            <div class="logo"><a href="index.html"><span>Данис</span> fronted-разработчик</a></div>
+            <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Привет, я Данис – создаю сайты, которые работают на ваш бизнес</h1>
+            <h4>Вёрстка и фронтенд-разработка – от идеи до готового продукта.</h4>
+            <ul>
+                <li><a href="#contacts">Связаться со мной</a></li>
+                <li><a href="#portfolio">Посмотреть портфолио</a></li>
+            </ul>
+        </section>
+        <section class="about" id="about">
+            <h2>Почему работа со мной принесет прибыль?</h2>
+            <div class="block-div">
+                <p>Я перспективный молодой fronted-разработчик. Работа со мной принесет вам пользу независимо от того как пойдет работа. Мои услуги в текущий момент стоят бесплатно. Вы получите сайт и опыт работу с фрилансерами. Работаю в указанные сроки. Я умею работать с HTML5 и CSS3. Создаю лендинги, которые привлекают клиентов работать с вами.</p>
+                <ul>Факты в цифрах
+                <li>Напишу вам лендинг за 1-3 дня</li>
+                <li>3 бесплатной правки</li>
+                <li>Верстка и доработка лендингов</li>
+                </ul></div>
+        </section>
+        <section class="services" id="services">
+            <h2>Что вы получите</h2>
+            <div class="block-card">
+                <ul>
+                    <li><section class="card">
+                        <h3>⚙️ Доработка сайта и интерактив</h3>
+                        <p>Могу доработать сайт под ваше усмотрение. А создаю интерактив на сайте, который позволяет сайту и пользователю взаимодействовать друг с другом</p>
+                    </section></li>
+                    <li><section class="card">
+                        <h3>🖥️ Вёрстка сайтов</h3>
+                        <p>Создаю сайт на основе HTML. Использую CSS для создания дизайна сайта основываясь на вашем макете (figma)</p>
+                    </section></li>
+                </ul>
+                <ul>
+                    <li><section class="card">
+                        <h3>🚀 Оптимизация производительности</h3>
+                        <p>Минимизирую код, чтобы сайт работал быстро</p>
+                    </section></li>
+                    <li><section class="card">
+                        <h3>🔧 Подключение к сервису</h3>
+                        <p>Подключу ваш сайт к бесплатному сервису</p>
+                    </section></li>
+                </ul>
+                <ul>
+                    <li><section class="card">
+                        <h3>🤑 Абсолютно бесплатная услуга</h3>
+                        <p>Сделаю всю работу, не спросив ни копейки</p>
+                    </section></li>
+                </ul>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <h2>Мое портфолио</h2>
+            <div class="portfolio-div">
+                <section class="card-portfolio">
+                    <div>
+                        <h3>Сайт, посвященный формуле 1</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                    <img src="1.png">
+                </section>
+                <section class="card-portfolio">
+                    <div>             
+                        <h3>Сайт, посвященный химической промышленности</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                        <img src="2.png">
+                </section>
+                <section class="card-portfolio">
+                    <div>
+                        <h3>Сайт, посвященный агентству недвижимости</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                        <img src="3.png">
+                </section>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <h2>Свяжитесь со мной</h2>
+            <form method="post" action="https://formspree.io/f/xojgjpyl">
+                <div>
+                    <label>Ваше ФИО<span> *</span></label>
+                    <input type="text" required name="username" id="username" placeholder="Иванов Иван Иванович">
+                </div>
+                <div>
+                    <label>Ваша электронная почта<span> *</span></label>
+                    <input type="email" required name="email" id="email" placeholder="Ivanov@gmail.com">
+                </div>
+                <div>
+                    <label>Ваш телеграмм username</label>
+                    <input type="text" name="username-tg" id="username-tg" placeholder="@Ivan">
+                </div>
+                <div>
+                    <button type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="logo"><a href="index.html"><span>Данис</span> fronted-разработчик</a></div>
+        <p id="copyright">© 2026 Данис Сафиуллин. Все права защищены.</p>
+    </footer>
+</body>
+</html>

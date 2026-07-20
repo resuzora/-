@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.webp" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px; 
+        }
+        a,
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        p {
+            color: black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-indent: 1.5em;
+        }
+        h2 {
+            font-family: "Roboto Mono", monospace;
+            font-size: clamp(1.8rem, 3vw, 3.8rem);
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /*Блок header*/
+
+        header {
+            display:grid;
+            gap: 1vw;
+            margin-bottom: 5vw;
+        }
+        span {
+            color: rgba(55, 55, 240, 1);
+        }
+        .logo a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 2.6vw;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .main-nav ul {
+            list-style: none;
+            display:flex;
+            gap:2.6vw;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        nav a:hover {
+            color: black;
+            cursor: pointer;
+            text-decoration: underline;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .header-div {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1vw 2.6vw 0vw 2.6vw;
+        }
+        .menu-toggle {
+            border:none;
+            background-color: white;
+        }
+        hr {
+            height: clamp(2px, 0.26vw, 20px);
+            background-color: rgba(55, 55, 240, 1);
+            border:none;
+        }
+
+        /*Блок hero*/
+
+        .hero a {
+            background-color: rgba(55, 55, 240, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1.25rem;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 0.6em 2.4em;
+        }
+        .hero a:hover{
+            background-color: rgba(111, 111, 246, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1.25rem;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 0.6em 2.4em;
+        }
+        .hero a:active{
+            background-color: white;
+            border-radius: 100px;
+            outline: 0.26vw rgba(111, 111, 246, 1) solid;
+            outline-offset: -0.26vw;
+            color: rgba(111, 111, 246, 1);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1.25rem;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 0.6em 2.4em;
+            transform: scale(0.95);
+        }
+        .hero ul {
+            list-style: none;
+            display:flex;
+            gap:2.6vw;
+        }
+        h1 {
+            color:black;
+            font-family: "Roboto Mono", monospace;
+            font-size: clamp(2rem, 5.2vw, 4rem);
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-indent: 44.27vw;
+        }
+        h3 {
+            color:black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 2vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal
+        }
+        .hero {
+            padding-right: 2.6vw;
+            padding-left: 2.6vw;
+            display:grid;
+            gap: 2.6vw;
+            margin-bottom: 5.2vw;
+        }
+
+        /*Блок about*/
+
+        .block-div {
+            display:grid;
+            gap:1vw;
+        }
+        .about ul {
+            padding-left: 2em;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .about {
+            padding-right: 2.6vw;
+            padding-left: 2.6vw;
+            margin-bottom: 5.2vw;
+            display: grid;
+            gap: 2.6vw;
+        }
+
+        /*Блок services*/
+
+        .services h2 {
+            font-family: "Roboto Mono", monospace;
+            font-size: clamp(2rem, 3vw, 4rem);
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .services h3 {
+            color: rgba(55, 55, 240, 1);
+            font-family: "Roboto Mono", monospace;
+            font-size: 1.56vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card {
+            display:grid;
+            gap:0.52vw;
+            width: 31.25vw;
+        }
+        .services ul {
+            display:flex;
+            gap: 16.14vw;
+            list-style: none;
+        }
+        .services {
+            display:grid;
+            gap: 2.6vw;
+            padding-right: 2.6vw;
+            padding-left: 2.6vw;
+            margin-bottom: 5.2vw;
+        }
+        .block-card {
+            display: grid;
+            gap: 1vw;
+        }
+
+        /*Блок portfolio*/
+
+        .portfolio {
+            display:grid;
+            gap: 2.6vw;
+            margin-bottom: 5.2vw;
+            padding-left: 2.6vw;
+            padding-right: 2.6vw;
+        }
+        h3 {
+            color: black;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1.56vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card-portfolio img {
+            width: 41.66vw;
+            border-radius: 2vw;
+            outline: 0.26vw solid rgba(55, 55, 240, 1);
+            outline-offset: -0.26vw;
+        }
+        .portfolio-div {
+            display: grid;
+            gap:2.6vw;
+        }
+        .card-portfolio {
+            display: grid;
+            gap:1vw;
+        }
+        .card-portfolio div {
+            display: grid;
+            gap:0.5vw;
+        }
+
+        /*Блок contacts*/
+
+        .contacts {
+            display: grid;
+            gap:2.6vw;
+            padding-right: 2.6vw;
+            padding-left: 2.6vw;
+            margin-bottom: 5.2vw;
+        }
+        input {
+            background-color: white;
+            border-radius: 100px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            padding: 0.6em 2.4em;
+            outline: 0.26vw solid rgba(55, 55, 240, 1);
+            outline-offset: -0.26vw;
+            height: 2.6vw;
+        }
+        .contacts button {
+            background-color: rgba(55, 55, 240, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            border:0px;
+            height: 3.5em;
+        }
+        .contacts button:hover{
+            background-color: rgba(111, 111, 246, 1);
+            border-radius: 100px;
+            color:white;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            height: 3,64vw;
+        }
+        .contacts button:active{
+            background-color: white;
+            border-radius: 100px;
+            outline: 0.26vw rgba(111, 111, 246, 1) solid;
+            outline-offset: -0.26vw;
+            color: rgba(111, 111, 246, 1);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+            font-size: 1vw;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            height: 3,64vw;
+            transform: scale(0.95);
+        }
+        .contacts div {
+            display: grid;
+            gap:0.52vw;
+        }
+        .contacts form {
+            display: grid;
+            gap:1vw;
+        }
+        .contacts span {
+            color: rgba(230, 39, 39, 1);
+        }
+
+        /*Секция footer*/
+
+        footer p {
+            text-indent: 64.58vw;
+            display: flex;    
+            color:white;
+        }
+        footer {
+            background-color: rgba(55, 55, 240, 1);
+            padding-right: 2.6vw;
+            padding-left: 2.6vw;
+            padding-bottom: 1vw;
+            display: grid;
+            gap:1vw;
+        }
+        footer .logo a{
+            color:white;
+            font-size: 5.2vw;
+            font-weight: 26vw;
+        }
+        footer .logo span {
+            color: white;
+        }
+        .logo-footer a{
+            font-size: 5,2vw;
+            color:white;
+        }
+        .kwork img{
+            max-width: 2.6vw;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-div">
+            <div class="logo"><a href="index.html"><span>Данис</span> fronted-разработчик</a></div>
+            <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Привет, я Данис – создаю сайты, которые работают на ваш бизнес</h1>
+            <h3>Вёрстка и фронтенд-разработка – от идеи до готового продукта.</h3>
+            <ul>
+                <li><a href="#contacts">Связаться со мной</a></li>
+                <li><a href="#portfolio">Посмотреть портфолио</a></li>
+            </ul>
+        </section>
+        <section class="about" id="about">
+            <h2>Почему работа со мной принесет прибыль?</h2>
+            <div class="block-div">
+                <p>Я перспективный молодой fronted-разработчик. Работа со мной принесет вам пользу независимо от того как пойдет работа. Мои услуги в текущий момент стоят бесплатно. Вы получите сайт и опыт работу с фрилансерами. Работаю в указанные сроки. Я умею работать с HTML5 и CSS3. Создаю лендинги, которые привлекают клиентов работать с вами.</p>
+                <ul>Факты в цифрах
+                <li>Напишу вам лендинг за 1-3 дня</li>
+                <li>3 бесплатной правки</li>
+                <li>Верстка и доработка лендингов</li>
+                </ul>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <h2>Что вы получите</h2>
+            <div class="block-card">
+                <ul>
+                    <li><section class="card">
+                        <h3>⚙️ Доработка сайта и интерактив</h3>
+                        <p>Могу доработать сайт под ваше усмотрение. А создаю интерактив на сайте, который позволяет сайту и пользователю взаимодействовать друг с другом</p>
+                    </section></li>
+                    <li><section class="card">
+                        <h3>🖥️ Вёрстка сайтов</h3>
+                        <p>Создаю сайт на основе HTML. Использую CSS для создания дизайна сайта основываясь на вашем макете (figma)</p>
+                    </section></li>
+                </ul>
+                <ul>
+                    <li><section class="card">
+                        <h3>🚀 Оптимизация производительности</h3>
+                        <p>Минимизирую код, чтобы сайт работал быстро</p>
+                    </section></li>
+                    <li><section class="card">
+                        <h3>🔧 Подключение к сервису</h3>
+                        <p>Подключу ваш сайт к бесплатному сервису</p>
+                    </section></li>
+                </ul>
+                <ul>
+                    <li><section class="card">
+                        <h3>🤑 Абсолютно бесплатная услуга</h3>
+                        <p>Сделаю всю работу, не спросив ни копейки</p>
+                    </section></li>
+                </ul>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <h2>Мое портфолио</h2>
+            <div class="portfolio-div">
+                <section class="card-portfolio">
+                    <div>
+                        <h3>Сайт, посвященный формуле 1</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                    <img src="1.png">
+                </section>
+                <section class="card-portfolio">
+                    <div>             
+                        <h3>Сайт, посвященный химической промышленности</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                        <img src="2.png">
+                </section>
+                <section class="card-portfolio">
+                    <div>
+                        <h3>Сайт, посвященный агентству недвижимости</h3>
+                        <p>Лендинг с интерактивом, фотографиями и обратной связи</p>
+                    </div>
+                        <img src="3.png">
+                </section>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <h2>Свяжитесь со мной</h2>
+            <form method="post" action="https://formspree.io/f/xojgjpyl">
+                <div>
+                    <label>Ваше ФИО<span> *</span></label>
+                    <input type="text" required name="username" id="username" placeholder="Иванов Иван Иванович">
+                </div>
+                <div>
+                    <label>Ваша электронная почта<span> *</span></label>
+                    <input type="email" required name="email" id="email" placeholder="Ivanov@gmail.com">
+                </div>
+                <div>
+                    <label>Ваш телеграмм username</label>
+                    <input type="text" name="username-tg" id="username-tg" placeholder="@Ivan">
+                </div>
+                <div>
+                    <button type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="logo-footer"><h2><a href="index.html">Данис fronted-разработчик</a></h2></div>
+        <p id="copyright">© 2026 Данис Сафиуллин. Все права защищены.</p>
+        <a class="kwork" href="https://kwork.ru/user/safiullindanis6"><img src="kwork.png"></a>
+    </footer>
+</body>
+</html>
